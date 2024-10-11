@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-11T06:42:24.312Z",
+    "end": "2024-10-11T06:42:30.576Z",
+    "duration": 6264,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "20f2b727-4e88-46b4-b4aa-a26ae58e6364",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "986484c6-93ed-46ef-9530-8a2fa66cae87",
+          "title": "Login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should login successfully with valid credentials",
+              "fullTitle": "Login test Should login successfully with valid credentials",
+              "timedOut": null,
+              "duration": 1071,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#username\").type(\"admin\");\ncy.get(\"#password\").type(\"123456\");\ncy.get(\"#submit-button\").click();\ncy.get(\"#loginMessage\").should(\"contain.text\", \"Login successful!\");",
+              "err": {},
+              "uuid": "6d0dfb76-8e31-4806-b190-f8090a7b8d28",
+              "parentUUID": "986484c6-93ed-46ef-9530-8a2fa66cae87",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should display error message when login with invalid credentials",
+              "fullTitle": "Login test Should display error message when login with invalid credentials",
+              "timedOut": null,
+              "duration": 665,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#username\").type(\"admin123\");\ncy.get(\"#password\").type(\"123\");\ncy.get(\"#submit-button\").click();\ncy.get(\"#loginMessage\").should(\"contain.text\", \"Invalid username or password.\");",
+              "err": {},
+              "uuid": "68d3cd95-fc58-43f1-ad72-e3da8af17def",
+              "parentUUID": "986484c6-93ed-46ef-9530-8a2fa66cae87",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should display error message when login with empty credentials (Empty username)",
+              "fullTitle": "Login test Should display error message when login with empty credentials (Empty username)",
+              "timedOut": null,
+              "duration": 420,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#password\").type(\"123456\");\ncy.get(\"#submit-button\").click();\ncy.get(\"#loginMessage\").should(\"contain.text\", \"Please enter both username and password.\");",
+              "err": {},
+              "uuid": "3b9fb95a-6a3a-48e5-8b5e-96c961d7464f",
+              "parentUUID": "986484c6-93ed-46ef-9530-8a2fa66cae87",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should display error message when login with empty credentials (Empty Password)",
+              "fullTitle": "Login test Should display error message when login with empty credentials (Empty Password)",
+              "timedOut": null,
+              "duration": 401,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#username\").type(\"admin\");\ncy.get(\"#submit-button\").click();\ncy.get(\"#loginMessage\").should(\"contain.text\", \"Please enter both username and password.\");",
+              "err": {},
+              "uuid": "5fefedf7-4449-4b2a-a119-9cd30cb812da",
+              "parentUUID": "986484c6-93ed-46ef-9530-8a2fa66cae87",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should display error message when login with empty credentials (Empty username & password)",
+              "fullTitle": "Login test Should display error message when login with empty credentials (Empty username & password)",
+              "timedOut": null,
+              "duration": 221,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#submit-button\").click();\ncy.get(\"#loginMessage\").should(\"contain.text\", \"Please enter both username and password.\");",
+              "err": {},
+              "uuid": "ee79a7c6-09ab-4902-bf87-4735c6a04d5c",
+              "parentUUID": "986484c6-93ed-46ef-9530-8a2fa66cae87",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6d0dfb76-8e31-4806-b190-f8090a7b8d28",
+            "68d3cd95-fc58-43f1-ad72-e3da8af17def",
+            "3b9fb95a-6a3a-48e5-8b5e-96c961d7464f",
+            "5fefedf7-4449-4b2a-a119-9cd30cb812da",
+            "ee79a7c6-09ab-4902-bf87-4735c6a04d5c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2778,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

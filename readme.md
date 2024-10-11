@@ -1,4 +1,4 @@
-## Objective:
+~## Objective:
 Your task is to create and execute test cases for testing the login functionality of a web application using Cypress.
 
 ## Instructions:
@@ -23,3 +23,13 @@ Your task is to create and execute test cases for testing the login functionalit
 Please submit your Cypress test scripts along with the test report to your GitHub/GitLab repository. Ensure that your submission includes clear instructions on how to run the tests.
 
 **Note:** You are encouraged to explore additional test scenarios beyond the ones listed above to demonstrate your testing skills.
+
+## Testing Instruction:
+In this repo there are test cases for testing the e2e login functionality using cypress. The test cases are in the cypress folder-> e2e -> login.cy.test.
+
+To run the test, open a terminal and type :
+1. `npm install`
+2. `node index.js`
+3. `npx cypress run --browser chrome`
+
+After test, the report will be generate in mochawesome format in `cypress/reports`
